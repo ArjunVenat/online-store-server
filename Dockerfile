@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Build the application
-RUN npm run dev
+RUN npm start
 
 # Expose the port on which the app runs
 EXPOSE 3000
