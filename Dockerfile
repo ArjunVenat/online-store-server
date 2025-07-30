@@ -6,12 +6,12 @@ FROM node:18-slim
 WORKDIR /app
 
 # Install dependencies
-COPY package*.json ./
+COPY . .
 
 RUN npm install
 
-# Build the application
-RUN npm start
-
 # Expose the port on which the app runs
 EXPOSE 3000
+
+# Build the application
+CMD npm start
