@@ -1,0 +1,109 @@
+{
+  "animals": [
+    {
+      "id": "animal_001",
+      "timestamp": "2025-01-16T10:30:00.000Z",
+      "animal_type": "Cow",
+      "age": 2,
+      "weight": 450.0,
+      "price": 1200.00,
+      "animal_name": "Bessie",
+      "animal_gender": "Female"
+    },
+    {
+      "id": "animal_003",
+      "timestamp": "2025-01-16T12:00:00.000Z",
+      "animal_type": "Chicken",
+      "age": 1,
+      "weight": 4.2,
+      "price": 25.00,
+      "animal_name": "Henrietta",
+      "animal_gender": "Female"
+    },
+    {
+      "id": "animal_004",
+      "timestamp": "2025-01-16T13:30:00.000Z",
+      "animal_type": "Sheep",
+      "age": 2,
+      "weight": 65.8,
+      "price": 400.00,
+      "animal_name": "Woolly",
+      "animal_gender": "Female"
+    },
+    {
+      "id": "animal_005",
+      "timestamp": "2025-01-16T14:15:00.000Z",
+      "animal_type": "Goat",
+      "age": 1,
+      "weight": 45.3,
+      "price": 350.00,
+      "animal_name": "Billy",
+      "animal_gender": "Male"
+    },
+    {
+      "id": "animal_006",
+      "timestamp": "2025-01-16T15:00:00.000Z",
+      "animal_type": "Horse",
+      "age": 4,
+      "weight": 520.0,
+      "price": 2500.00,
+      "animal_name": "Thunder",
+      "animal_gender": "Male"
+    },
+    {
+      "id": "animal_007",
+      "timestamp": "2025-01-16T15:45:00.000Z",
+      "animal_type": "Duck",
+      "age": 1,
+      "weight": 2.8,
+      "price": 35.00,
+      "animal_name": "Quackers",
+      "animal_gender": "Male"
+    },
+    {
+      "id": "animal_008",
+      "timestamp": "2025-01-16T16:30:00.000Z",
+      "animal_type": "Turkey",
+      "age": 1,
+      "weight": 12.5,
+      "price": 85.00,
+      "animal_name": "Gobbles",
+      "animal_gender": "Female"
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "street_address": "123 Admin St",
+      "email": "admin@example.com",
+      "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+      "first": "Admin",
+      "last": "User",
+      "role": "admin"
+    },
+    {
+      "username": "john_doe",
+      "street_address": "456 Main St",
+      "email": "john@example.com",
+      "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+      "first": "John",
+      "last": "Doe",
+      "role": "user"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order_001",
+      "username": "john_doe",
+      "order_date": "2025-01-16T10:30:00.000Z",
+      "ship_address": "456 Main St",
+      "items": [
+        {
+          "animal_id": "animal_002",
+          "quantity": 1,
+          "price": 800.00
+        }
+      ]
+    }
+  ]
+}
