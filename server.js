@@ -11,6 +11,9 @@ const orderRoutes = require('./routes/orders');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const api_key = "iubev97e5bgwou4wgiw5i8gq4ibgvwrn"
+const api_url = `https://www.eoieuot.com/key=?${api_key}`
+
 // Security middleware
 app.use(helmet());
 app.use(cors());
