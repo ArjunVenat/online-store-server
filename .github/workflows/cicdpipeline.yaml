@@ -11,9 +11,8 @@ jobs:
       - name: Check out repo code
         uses: actions/checkout@v4
       - name: Scan for Vulnerabilities
-        uses: trufflesecurity/trufflehog@v3.90.2
-        with: 
-          extra_args: --results=verified,unknown
+        run: |
+          docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=trufflesecurity
       - name: Install dependencies
         run: npm ci
       - run: echo "Pipeline ran succesfully!"
