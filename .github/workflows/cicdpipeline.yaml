@@ -10,8 +10,10 @@ jobs:
       - run: echo "Starting CI/CD workflow"
       - name: Check out repo code
         uses: actions/checkout@v4
+      - run: |
+          ls -l
       - name: Scan for Vulnerabilities
-        uses: trufflesecurity/trufflehog@main
+        uses: trufflesecurity/trufflehog@3.90.0
         with: 
           extra_args: --results=verified,unknown
       - name: Install dependencies
