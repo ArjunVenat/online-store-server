@@ -12,8 +12,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Scan for Vulnerabilities
         uses: trufflesecurity/trufflehog@main
-        with: 
-          extra_args: --results=verified,unknown
       - name: Install dependencies
         run: npm ci
       - run: echo "Pipeline ran succesfully!"
