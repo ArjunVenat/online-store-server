@@ -13,7 +13,7 @@ jobs:
       - run: |
           ls -l
       - name: Scan for Vulnerabilities
-        uses: trufflesecurity/trufflehog@3.90.0
+        uses: trufflesecurity/trufflehog@main
         with: 
           extra_args: --results=verified,unknown
       - name: Install dependencies
