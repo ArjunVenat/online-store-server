@@ -35,10 +35,9 @@ jobs:
         run: |
           aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | \
           docker login --username AWS --password-stdin ${{ secrets.ECR_SERVER_REPO }}
-      - name: Build and Tag Docker Image
-        run: |
-          docker build -f Dockerfile -t online-store-server:latest .
-          docker image ls
+      - name: Build Docker Image
+        run: docker build -f Dockerfile -t online-store-server:${{ env.VERSION }} .
+      - name: Tag Docker Image
           docker tag online-store-server:${{ env.VERSION }} ${{ secrets.ECR_SERVER_REPO }}:${{ env.VERSION }}
           docker tag online-store-server:${{ env.VERSION }} ${{ secrets.ECR_SERVER_REPO }}:latest
       - name: Push Docker Image to ECR Repository
